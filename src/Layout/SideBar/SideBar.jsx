@@ -20,11 +20,11 @@ const SideBar = () => {
       sideBar.classList.toggle("active");
       menuButton.style.visibility = "hidden";
     });
-    let closeButton = document.getElementsByClassName("close-btn")[0];
-    closeButton.addEventListener("click", () => {
-      sideBar.classList.remove("active");
-      menuButton.style.visibility = "visible";
-    });
+    // let closeButton = document.getElementsByClassName("close-btn")[0];
+    // closeButton.addEventListener("click", () => {
+    //   sideBar.classList.remove("active");
+    //   menuButton.style.visibility = "visible";
+    // });
 
     let func = document.getElementsByClassName("func")[0];
     let tech = document.getElementsByClassName("tech")[0];
@@ -41,9 +41,9 @@ const SideBar = () => {
         <i className="fas fa-bars"></i>
       </div>
       <div className="side-bar">
-        <div className="close-btn">
+        {/* <div className="close-btn">
           <i className="fas fa-times"></i>
-        </div>
+        </div> */}
         <div className="menu">
           <div className="item">
             <a href="#">
