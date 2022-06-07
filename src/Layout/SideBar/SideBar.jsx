@@ -25,6 +25,15 @@ const SideBar = () => {
       sideBar.classList.remove("active");
       menuButton.style.visibility = "visible";
     });
+
+    let func = document.getElementsByClassName("func")[0];
+    let tech = document.getElementsByClassName("tech")[0];
+    func.addEventListener("click", () => {
+      tech.nextSibling.classList.remove("show");
+    });
+    tech.addEventListener("click", () => {
+      func.nextSibling.classList.remove("show");
+    });
   }, []);
   return (
     <>
@@ -53,7 +62,7 @@ const SideBar = () => {
               <i className="fas fa-angle-right dropdown"></i>
             </a>
             <div className="sub-menu">
-              <a href="#" className="sub-btn sub-item">
+              <a href="#" className="func sub-btn sub-item">
                 <i className="fas fa-table"></i>
                 Functional
                 <i className="fas fa-angle-right dropdown"></i>
@@ -75,7 +84,7 @@ const SideBar = () => {
                   Catalog
                 </a>
               </div>
-              <a href="#" className="sub-btn sub-item">
+              <a href="#" className="tech sub-btn sub-item">
                 <i className="fas fa-table"></i>
                 Technical
                 <i className="fas fa-angle-right dropdown"></i>
